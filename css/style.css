@@ -16,6 +16,10 @@
             height: 240px;
         }
         
+        .red {
+            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+        }
+        
         #synthesizer {
             width: 802px;
         }
@@ -49,4 +53,10 @@
         .functions-btn {
             width: 100px;
             border-radius: 5px;
+        }
+        
+        #sample {
+            visibility: hidden;
+            width: 1px;
+            height: 1px;
         }

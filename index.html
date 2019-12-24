@@ -25,7 +25,7 @@
 
         <div class="row text-center" id="colors">
 
-            <div class="col-sm-1 color">DO</div>
+            <div id='red' class="col-sm-1 color">DO</div>
             <div class="col-sm-1 color">RE</div>
             <div class="col-sm-1 color">MI</div>
             <div class="col-sm-1 color">FA</div>
@@ -40,32 +40,31 @@
 
         <div class="row " id="synthesizer">
 
+            <div data-note="C4" class="key col-sm-1">A</div>
 
-            <div class="key col-sm-1">A</div>
+            <div data-note="C#4" class="black-key col-sm-1">W</div>
 
-            <div class="col-sm-1 black-key ">W</div>
+            <div data-note="D4" class="key col-sm-1">S</div>
 
-            <div class="key col-sm-1">S</div>
+            <div data-note="D#4" class="black-key col-sm-1">E</div>
 
-            <div class="black-key col-sm-1">E</div>
+            <div data-note="E4" class="key col-sm-1">D</div>
 
-            <div class="key col-sm-1">D</div>
+            <div data-note="F4" class="key col-sm-1">F</div>
 
-            <div class="key col-sm-1">F</div>
+            <div data-note="F#4" class="black-key col-sm-1">Y</div>
 
-            <div class="black-key col-sm-1 ">Y</div>
+            <div data-note="G4" class="key col-sm-1">H</div>
 
-            <div class="key col-sm-1">H</div>
+            <div data-note="G#4" class="black-key col-sm-1">U</div>
 
-            <div class="black-key col-sm-1">U</div>
+            <div data-note="A4" class="key col-sm-1">J</div>
 
-            <div class="key col-sm-1">J</div>
+            <div data-note="A#4" class="black-key col-sm-1">I</div>
 
-            <div class="black-key col-sm-1">I</div>
+            <div data-note="B4" class="key col-sm-1">K</div>
 
-            <div class="key col-sm-1">K</div>
-
-            <div class="key col-sm-1">L</div>
+            <div data-note="C5" class="key col-sm-1">L</div>
 
 
         </div>
@@ -73,17 +72,26 @@
         <!-- section for functions -->
 
         <div id="functions" class="d-flex bd-highlight">
-
-            <button class="functions-btn">record</button>
-            <button class="functions-btn">save</button>
+            <button id='record' class="functions-btn">record</button>
+            <input type="text" name="text" id="sample">
+            <button class="functions-btn" id='save'>save</button>
             <button class="functions-btn">play</button>
+            <p id='log'></p>
 
         </div>
+
+
 
         <!-- Latest compiled and minified JavaScript - bootstrap -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+        <!--link for tone.js library-->
+        <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.4.9/Tone.js"></script>
+
 
         <!--link to js file -->
         <script src="js/script.js"></script>

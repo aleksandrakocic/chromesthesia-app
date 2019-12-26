@@ -3,88 +3,7 @@ const synth = new Tone.Synth();
 synth.oscillator.type = "sine";
 synth.toDestination();
 var synthesizer = document.getElementById("synthesizer");
-var key = document.getElementsByClassName("key");
-
-
-// FOR NOTE TRIGGER
-document.addEventListener("keydown", e => {
-        switch (e.key) {
-            case "a":
-                return synth.triggerAttack("C4", "16n");
-            case "w":
-                return synth.triggerAttack("C#4", "16n");
-            case "s":
-                return synth.triggerAttack("D4", "16n");
-            case "e":
-                return synth.triggerAttack("D#4", "16n");
-            case "d":
-                return synth.triggerAttack("E4", "16n");
-            case "f":
-                return synth.triggerAttack("F4", "16n");
-            case "y":
-                return synth.triggerAttack("F#4", "16n");
-            case "h":
-                return synth.triggerAttack("G4", "16n");
-            case "u":
-                return synth.triggerAttack("G#4", "16n");
-            case "j":
-                return synth.triggerAttack("A4", "16n");
-            case "i":
-                return synth.triggerAttack("A#4", "16n");
-            case "k":
-                return synth.triggerAttack("B4", "16n");
-            case "l":
-                return synth.triggerAttack("C5", "16n");
-            default:
-                return;
-        }
-    }
-
-);
-
-//STOP  SOUND 
-
-document.addEventListener("keyup", e => {
-        switch (e.key) {
-            case "a":
-            case "w":
-            case "s":
-            case "e":
-            case "d":
-            case "f":
-            case "y":
-            case "h":
-            case "u":
-            case "j":
-            case "i":
-            case "k":
-            case "l":
-                synth.triggerRelease();
-        }
-    }
-
-);
-
-
-
-
-
-
-// triger the note on mouse click
-synthesizer.addEventListener("mousedown", e => {
-    synth.triggerAttack(e.target.dataset.note);
-});
-
-synthesizer.addEventListener("mouseup", e => {
-    synth.triggerRelease()
-});
-
-
-
-
-
-
-// FOR COLORS ANIMATION
+// var key = document.getElementsByClassName("key");
 
 
 var red = document.getElementById("red");
@@ -96,123 +15,117 @@ var blue = document.getElementById('blue');
 var violet = document.getElementById('violet');
 
 
-// ANIMATION ON KEYDOWN
-document.addEventListener("keydown", e => {
-    switch (e.key) {
+document.addEventListener("keydown", (e) => {
+
+    var key = e.key;
+    switch (e, key) {
         case "a":
-            return red.classList.add("red-visible");
+            red.classList.add("red-visible");
+            document.querySelectorAll('.key')[0].classList.add("pressed");
+            synth.triggerAttack("C4", "16n");
+            break
+
+        case "w":
+            synth.triggerAttack("C#4", "16n");
+            break
+
         case "s":
-            return orange.classList.add('orange-visible');
-        case 'd':
-            return yellow.classList.add('yellow-visible');
-        case 'f':
-            return green.classList.add('green-visible');
-        case 'h':
-            return cyan.classList.add('cyan-visible');
-        case 'j':
-            return blue.classList.add('blue-visible');
-        case 'k':
-            return violet.classList.add('violet-visible');
+            document.querySelectorAll('.key')[1].classList.add("pressed");
+            orange.classList.add('orange-visible');
+            synth.triggerAttack("D4", "16n");
+            break
 
-        default:
-            return;
+        case "e":
+            synth.triggerAttack("D#4", "16n");
+            break
+        case "d":
 
+            yellow.classList.add('yellow-visible');
+            document.querySelectorAll('.key')[2].classList.add("pressed");
+            synth.triggerAttack("E4", "16n");
+            break
+
+        case "f":
+            green.classList.add('green-visible');
+            document.querySelectorAll('.key')[3].classList.add("pressed");
+            synth.triggerAttack("F4", "16n");
+            break
+
+        case "y":
+            synth.triggerAttack("F#4", "16n");
+            break
+
+        case "h":
+            cyan.classList.add('cyan-visible');
+            document.querySelectorAll('.key')[4].classList.add("pressed");
+            synth.triggerAttack("G4", "16n");
+            break
+
+        case "u":
+            synth.triggerAttack("G#4", "16n");
+            break
+
+        case "j":
+            blue.classList.add('blue-visible');
+            document.querySelectorAll('.key')[5].classList.add("pressed");
+            synth.triggerAttack("A4", "16n");
+            break
+
+        case "i":
+            synth.triggerAttack("A#4", "16n");
+            break
+
+        case "k":
+            violet.classList.add('violet-visible');
+            synth.triggerAttack("B4", "16n");
+            document.querySelectorAll('.key')[6].classList.add("pressed");
+            break
+
+        case "l":
+            document.querySelectorAll('.key')[7].classList.add("pressed");
+            synth.triggerAttack("C5", "16n");
+            break;
     }
-});
+})
 
 
-//END ANIMATION ON KEYUP
+
+
 document.addEventListener("keyup", e => {
     switch (e.key) {
         case "a":
-            return red.classList.remove("red-visible");
-        case "s":
-            return orange.classList.remove("orange-visible");
-        case "d":
-            return yellow.classList.remove("yellow-visible");
-        case "f":
-            return green.classList.remove("green-visible");
-        case "h":
-            return cyan.classList.remove("cyan-visible");
-        case "j":
-            return blue.classList.remove("blue-visible");
-        case "k":
-            return violet.classList.remove("violet-visible");
-        default:
+            document.querySelectorAll('.key')[0].classList.remove("pressed");
+            synth.triggerRelease();
+            red.classList.remove("red-visible");
 
+        case "s":
+            document.querySelectorAll('.key')[1].classList.remove("pressed");
+            synth.triggerRelease();
+            orange.classList.remove("orange-visible");
+
+        case "d":
+            document.querySelectorAll('.key')[2].classList.remove("pressed");
+            synth.triggerRelease();
+            yellow.classList.remove("yellow-visible");
+
+        case "f":
+            document.querySelectorAll('.key')[3].classList.remove("pressed");
+            synth.triggerRelease();
+            green.classList.remove("green-visible");
+
+        case "h":
+            document.querySelectorAll('.key')[4].classList.remove("pressed");
+            synth.triggerRelease();
+            cyan.classList.remove("cyan-visible");
+
+        case "j":
+            document.querySelectorAll('.key')[5].classList.remove("pressed");
+            synth.triggerRelease();
+            blue.classList.remove("blue-visible");
+
+        case "k":
+            document.querySelectorAll('.key')[6].classList.remove("pressed");
+            synth.triggerRelease();
+            violet.classList.remove("violet-visible");
     }
 });
-
-
-
-
-
-
-// FOR RECORDING --- NE RADI
-
-
-// var log = document.getElementById('log');
-// var input = document.querySelector('input');
-// var record = document.getElementById("record");
-// var save = document.getElementById("save");
-// var value = [];
-// record.addEventListener('keypress', logKey);
-
-// function logKey(e) {
-// log.textContent += `${e.key}`;
-//     value += `${e.key}`;
-//     console.log(value);
-// }
-
-// save.addEventListener("click", repeatValue);
-
-// function repeatValue()[
-
-// ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-// FOR KEYS 3D ANIMATION
-// WORKS ONLY ON MOUSE  CLICK
-
-
-
-
-
-var header = document.getElementById("synthesizer");
-var btns = header.getElementsByClassName("key");
-
-// for (var i = 0; i < btns.length; i++) {
-//     btns[i].addEventListener("click", function() {
-//         var current = document.getElementsByClassName("shadow-inset-center");
-//         if (current.length > 0) {
-//             current[0].className = current[0].className.replace(" shadow-inset-center", "");
-//         }
-//         this.className += " shadow-inset-center";
-//     })
-// };
-
-
-
-letters = ['a', 's', 'd'];
-var value = '';
-
-document.addEventListener("keydown", findKey);
-
-function findKey(e) {
-    value = e.key;
-    // console.log(value);
-    var a = letters.indexOf(value);
-    console.log(a);
-
-}

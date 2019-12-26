@@ -1,62 +1,132 @@
-        body {
-            width: auto;
-            height: auto;
-        }
-        
-        #heading {
-            margin-bottom: 20px;
-        }
-        
-        #colors {
-            width: 800px;
-        }
-        
-        .color {
-            width: 100px;
-            height: 240px;
-        }
-        
-        .red {
-            background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
-        }
-        
-        #synthesizer {
-            width: 802px;
-        }
-        
-        .key {
-            height: 300px;
-            width: 100px;
-            padding-top: 260px;
-            border: 1px solid gray;
-            background: white;
-            text-align: center;
-        }
-        
-        .black-key {
-            text-align: center;
-            width: 60px;
-            height: 200px;
-            position: relative;
-            z-index: 999;
-            margin-left: -30px;
-            margin-right: -30px;
-            border: 1px solid black;
-            background: black;
-            color: white;
-        }
-        
-        #functions {
-            margin-top: 20px;
-        }
-        
-        .functions-btn {
-            width: 100px;
-            border-radius: 5px;
-        }
-        
-        #sample {
-            visibility: hidden;
-            width: 1px;
-            height: 1px;
-        }
+            body {
+                width: auto;
+                height: auto;
+                padding-left: 20%;
+            }
+            
+            #content {
+                height: 100%;
+            }
+            
+            #heading {
+                margin-bottom: 20px;
+            }
+            /* COLORS ANIMATION SECTION */
+            
+            #colors {
+                width: 800px;
+                height: 240px;
+                margin-bottom: 20px;
+            }
+            
+            .color-hidden {
+                height: 240px;
+                width: 100px;
+                transform-origin: bottom;
+                transform: scaleY(0);
+                border: 1px solid white;
+                border-radius: 5px;
+            }
+            
+            .red-visible {
+                transform: scaleY(1);
+                height: 240px;
+                transition: 1.5s ease;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 0, 0) 100%);
+            }
+            
+            .orange-visible {
+                transform: scaleY(1);
+                height: 240px;
+                transition: 1.5s ease;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(253, 142, 20) 100%);
+            }
+            
+            .yellow-visible {
+                transform: scaleY(1);
+                height: 240px;
+                transition: 1.5s ease;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(254, 258, 28) 100%);
+            }
+            
+            .green-visible {
+                transform: scaleY(1);
+                height: 240px;
+                transition: 1s ease;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(0, 255, 0) 100%);
+            }
+            
+            .cyan-visible {
+                transform: scaleY(1);
+                height: 240px;
+                transition: 1.5s ease;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 0, 255) 100%);
+            }
+            
+            .violet-visible {
+                transform: scaleY(1);
+                height: 240px;
+                transition: 1.5s ease;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(97, 0, 255) 100%);
+            }
+            
+            .blue-visible {
+                transform: scaleY(1);
+                height: 240px;
+                transition: 1s ease;
+                background: rgb(255, 255, 255);
+                background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(0, 0, 255) 100%);
+            }
+            
+            #synthesizer {
+                width: 802px;
+            }
+            
+            .key {
+                height: 300px;
+                width: 100px;
+                padding-top: 260px;
+                border: 1px solid gray;
+                border-radius: 10px;
+                background: white;
+                text-align: center;
+            }
+            
+            .black-key {
+                text-align: center;
+                width: 60px;
+                height: 200px;
+                position: relative;
+                z-index: 999;
+                margin-left: -30px;
+                margin-right: -30px;
+                border: 1px solid black;
+                border-radius: 5px;
+                background: black;
+                color: white;
+            }
+            
+            #functions {
+                margin-top: 20px;
+            }
+            
+            .functions-btn {
+                width: 100px;
+                border-radius: 5px;
+            }
+            
+            #sample {
+                visibility: hidden;
+                width: 1px;
+                height: 1px;
+            }
+            
+            .red {
+                background: red;
+            }

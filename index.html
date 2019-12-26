@@ -17,69 +17,71 @@
 
 <body>
 
-    <div class="container justify-content-center">
+    <div id='content'>
+        <div class="d-flex justify-content-center">
 
-        <h1 id='heading'> HEADING</h1>
+            <h1 id='heading'> HEADING</h1>
 
-        <!-- section for colors animation -->
+            <!-- section for colors animation -->
 
-        <div class="row text-center" id="colors">
+            <div class=" row" id="colors">
 
-            <div id='red' class="col-sm-1 color">DO</div>
-            <div class="col-sm-1 color">RE</div>
-            <div class="col-sm-1 color">MI</div>
-            <div class="col-sm-1 color">FA</div>
-            <div class="col-sm-1 color">SOL</div>
-            <div class="col-sm-1 color">LA</div>
-            <div class="col-sm-1 color">SI</div>
-            <div class="col-sm-1 color">DO</div>
+                <div id='red' class="col-sm-1 color-hidden"></div>
+                <div id='orange' class="col-sm-1 color-hidden"></div>
+                <div id='yellow' class="col-sm-1 color-hidden"></div>
+                <div id='green' class="col-sm-1 color-hidden"></div>
+                <div id='cyan' class="col-sm-1 color-hidden"></div>
+                <div id='blue' class="col-sm-1 color-hidden"></div>
+                <div id='violet' class="col-sm-1 color-hidden"></div>
+                <div class="col-sm-1 color-hidden"></div>
+
+            </div>
+
+            <!-- section - synthesizer -->
+
+            <div class="row " id="synthesizer">
+
+                <div data-note="C4" class="key col-sm-1">A</div>
+
+                <div data-note="C#4" class="black-key col-sm-1">W</div>
+
+                <div data-note="D4" class="key col-sm-1">S</div>
+
+                <div data-note="D#4" class="black-key col-sm-1">E</div>
+
+                <div data-note="E4" class="key col-sm-1">D</div>
+
+                <div data-note="F4" class="key col-sm-1">F</div>
+
+                <div data-note="F#4" class="black-key col-sm-1">Y</div>
+
+                <div data-note="G4" class="key col-sm-1">H</div>
+
+                <div data-note="G#4" class="black-key col-sm-1">U</div>
+
+                <div data-note="A4" class="key col-sm-1">J</div>
+
+                <div data-note="A#4" class="black-key col-sm-1">I</div>
+
+                <div data-note="B4" class="key col-sm-1">K</div>
+
+                <div data-note="C5" class="key col-sm-1">L</div>
+
+
+            </div>
+
+            <!-- section for functions -->
+
+            <div id="functions" class="d-flex bd-highlight">
+                <button id='record' class="functions-btn">record</button>
+                <input type="text" name="text" id="sample">
+                <button class="functions-btn" id='save'>save</button>
+                <button class="functions-btn">play</button>
+                <p id='log'></p>
+
+            </div>
 
         </div>
-
-        <!-- section - synthesizer -->
-
-        <div class="row " id="synthesizer">
-
-            <div data-note="C4" class="key col-sm-1">A</div>
-
-            <div data-note="C#4" class="black-key col-sm-1">W</div>
-
-            <div data-note="D4" class="key col-sm-1">S</div>
-
-            <div data-note="D#4" class="black-key col-sm-1">E</div>
-
-            <div data-note="E4" class="key col-sm-1">D</div>
-
-            <div data-note="F4" class="key col-sm-1">F</div>
-
-            <div data-note="F#4" class="black-key col-sm-1">Y</div>
-
-            <div data-note="G4" class="key col-sm-1">H</div>
-
-            <div data-note="G#4" class="black-key col-sm-1">U</div>
-
-            <div data-note="A4" class="key col-sm-1">J</div>
-
-            <div data-note="A#4" class="black-key col-sm-1">I</div>
-
-            <div data-note="B4" class="key col-sm-1">K</div>
-
-            <div data-note="C5" class="key col-sm-1">L</div>
-
-
-        </div>
-
-        <!-- section for functions -->
-
-        <div id="functions" class="d-flex bd-highlight">
-            <button id='record' class="functions-btn">record</button>
-            <input type="text" name="text" id="sample">
-            <button class="functions-btn" id='save'>save</button>
-            <button class="functions-btn">play</button>
-            <p id='log'></p>
-
-        </div>
-
 
 
         <!-- Latest compiled and minified JavaScript - bootstrap -->
@@ -92,7 +94,6 @@
         <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.4.9/Tone.js"></script>
 
-
         <!--link to js file -->
         <script src="js/script.js"></script>
 
@@ -100,3 +101,10 @@
 </body>
 
 </html>
+
+
+
+<!-- <div id='red' class="col-sm-1 ">
+        <span>do</span>
+    <div class="color"></div>
+</div> -->

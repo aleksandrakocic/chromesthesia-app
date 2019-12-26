@@ -42,26 +42,7 @@ document.addEventListener("keydown", e => {
 
 );
 
-
-// var letters = ['a', 's', 'd'];
-// var notes = ['C4', 'D4', 'E4'];
-
-// document.addEventListener('keydown', e => {
-
-//     if (letters.indexOf(e.key) > -1) {
-//         // console.log(e.key);
-//         var a = 0;
-//         for (a = 0; a < letters.length; a++) {
-//             for (var i = 0; i < notes.length; i++) {
-
-//                 if (letters[a] == notes[i]) {
-//                     console.log(notes[i]);
-//                 }
-//             }
-//         }
-//     }
-// })
-
+//STOP  SOUND 
 
 document.addEventListener("keyup", e => {
         switch (e.key) {
@@ -85,6 +66,10 @@ document.addEventListener("keyup", e => {
 );
 
 
+
+
+
+
 // triger the note on mouse click
 synthesizer.addEventListener("mousedown", e => {
     synth.triggerAttack(e.target.dataset.note);
@@ -98,23 +83,61 @@ synthesizer.addEventListener("mouseup", e => {
 
 
 
+
 // FOR COLORS ANIMATION
 
-var red = document.getElementById("red");
 
-document.addEventListener("keypress", e => {
+var red = document.getElementById("red");
+var orange = document.getElementById('orange');
+var yellow = document.getElementById('yellow');
+var green = document.getElementById('green');
+var cyan = document.getElementById('cyan');
+var blue = document.getElementById('blue');
+var violet = document.getElementById('violet');
+
+
+// ANIMATION ON KEYDOWN
+document.addEventListener("keydown", e => {
     switch (e.key) {
         case "a":
-            return red.classList.add("red");
+            return red.classList.add("red-visible");
+        case "s":
+            return orange.classList.add('orange-visible');
+        case 'd':
+            return yellow.classList.add('yellow-visible');
+        case 'f':
+            return green.classList.add('green-visible');
+        case 'h':
+            return cyan.classList.add('cyan-visible');
+        case 'j':
+            return blue.classList.add('blue-visible');
+        case 'k':
+            return violet.classList.add('violet-visible');
+
         default:
+            return;
 
     }
 });
 
+
+//END ANIMATION ON KEYUP
 document.addEventListener("keyup", e => {
     switch (e.key) {
         case "a":
-            return red.classList.remove("red");
+            return red.classList.remove("red-visible");
+        case "s":
+            return orange.classList.remove("orange-visible");
+        case "d":
+            return yellow.classList.remove("yellow-visible");
+        case "f":
+            return green.classList.remove("green-visible");
+        case "h":
+            return cyan.classList.remove("cyan-visible");
+        case "j":
+            return blue.classList.remove("blue-visible");
+        case "k":
+            return violet.classList.remove("violet-visible");
         default:
 
     }
@@ -122,16 +145,74 @@ document.addEventListener("keyup", e => {
 
 
 
-// FOR RECORDING
 
 
-var log = document.getElementById('log');
-var input = document.querySelector('input');
 
-var record = document.getElementById("record");
+// FOR RECORDING --- NE RADI
 
-record.addEventListener('keypress', logKey);
 
-function logKey(e) {
-    log.textContent += `${e.code}`;
+// var log = document.getElementById('log');
+// var input = document.querySelector('input');
+// var record = document.getElementById("record");
+// var save = document.getElementById("save");
+// var value = [];
+// record.addEventListener('keypress', logKey);
+
+// function logKey(e) {
+// log.textContent += `${e.key}`;
+//     value += `${e.key}`;
+//     console.log(value);
+// }
+
+// save.addEventListener("click", repeatValue);
+
+// function repeatValue()[
+
+// ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+// FOR KEYS 3D ANIMATION
+// WORKS ONLY ON MOUSE  CLICK
+
+
+
+
+
+var header = document.getElementById("synthesizer");
+var btns = header.getElementsByClassName("key");
+
+// for (var i = 0; i < btns.length; i++) {
+//     btns[i].addEventListener("click", function() {
+//         var current = document.getElementsByClassName("shadow-inset-center");
+//         if (current.length > 0) {
+//             current[0].className = current[0].className.replace(" shadow-inset-center", "");
+//         }
+//         this.className += " shadow-inset-center";
+//     })
+// };
+
+
+
+letters = ['a', 's', 'd'];
+var value = '';
+
+document.addEventListener("keydown", findKey);
+
+function findKey(e) {
+    value = e.key;
+    // console.log(value);
+    var a = letters.indexOf(value);
+    console.log(a);
+
 }

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!--lik for jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <!-- link to css file-->
@@ -20,67 +24,69 @@
     <div id='content'>
         <div class="d-flex justify-content-center">
 
-            <h1 id='heading'> HEADING</h1>
+            <h1 id='heading'> Chromesthesia application</h1>
+            <h2 id='instructions'> Svako slovo odgovara jednoj noti. Pri sviranju pocinje animacija boja. </h2>
+
 
             <!-- section for colors animation -->
-
-            <div class=" row" id="colors">
-
-                <div id='red' class="col-sm-1 color-hidden"></div>
-                <div id='orange' class="col-sm-1 color-hidden"></div>
-                <div id='yellow' class="col-sm-1 color-hidden"></div>
-                <div id='green' class="col-sm-1 color-hidden"></div>
-                <div id='cyan' class="col-sm-1 color-hidden"></div>
-                <div id='blue' class="col-sm-1 color-hidden"></div>
-                <div id='violet' class="col-sm-1 color-hidden"></div>
-                <div class="col-sm-1 color-hidden"></div>
-
+            <div id='scale' class="col-sm-1 d-flex flex-column bd-highlight mb-4">
+                <p class='p-2 bd-highlight scale-info'>4/4</p>
+                <p class='scale-info  p-2 bd-highlight scale-info'>3/4</p>
+                <p class='scale-info p-2 bd-highlight scale-info'>2/4</p>
+                <p class='scale-info p-2 bd-highlight scale-info '>1/4</p>
             </div>
 
-            <!-- section - synthesizer -->
+            <div id='piano-content'>
 
-            <div class="row " id="synthesizer">
+                <!--colors section-->
+                <div class=" row" id="colors">
 
-                <div data-note="C4" class="key col-sm-1">A</div>
+                    <div id='red' class="col-sm-1 color-hidden"></div>
+                    <div id='orange' class="col-sm-1 color-hidden"></div>
+                    <div id='yellow' class="col-sm-1 color-hidden"></div>
+                    <div id='green' class="col-sm-1 color-hidden"></div>
+                    <div id='cyan' class="col-sm-1 color-hidden"></div>
+                    <div id='blue' class="col-sm-1 color-hidden"></div>
+                    <div id='violet' class="col-sm-1 color-hidden"></div>
+                    <div id='red-dark' class="col-sm-1 color-hidden"></div>
 
-                <div data-note="C#4" class="black-key col-sm-1">W</div>
+                </div>
 
-                <div data-note="D4" class="key col-sm-1">S</div>
 
-                <div data-note="D#4" class="black-key col-sm-1">E</div>
+                <!-- section - synthesizer -->
+                <div class="row " id="synthesizer">
 
-                <div data-note="E4" class="key col-sm-1">D</div>
+                    <div data-note="C4" class="key col-sm-1">A</div>
+                    <div data-note="C#4" class="black-key col-sm-1">W</div>
+                    <div data-note="D4" class="key col-sm-1">S</div>
+                    <div data-note="D#4" class="black-key col-sm-1">E</div>
+                    <div data-note="E4" class="key col-sm-1">D</div>
+                    <div data-note="F4" class="key col-sm-1">F</div>
+                    <div data-note="F#4" class="black-key col-sm-1">Y</div>
+                    <div data-note="G4" class="key col-sm-1">H</div>
+                    <div data-note="G#4" class="black-key col-sm-1">U</div>
+                    <div data-note="A4" class="key col-sm-1">J</div>
+                    <div data-note="A#4" class="black-key col-sm-1">I</div>
+                    <div data-note="B4" class="key col-sm-1">K</div>
+                    <div data-note="C5" class="key col-sm-1">L</div>
 
-                <div data-note="F4" class="key col-sm-1">F</div>
 
-                <div data-note="F#4" class="black-key col-sm-1">Y</div>
+                </div>
 
-                <div data-note="G4" class="key col-sm-1">H</div>
 
-                <div data-note="G#4" class="black-key col-sm-1">U</div>
-
-                <div data-note="A4" class="key col-sm-1">J</div>
-
-                <div data-note="A#4" class="black-key col-sm-1">I</div>
-
-                <div data-note="B4" class="key col-sm-1">K</div>
-
-                <div data-note="C5" class="key col-sm-1">L</div>
-
+                <!-- section for functions -->
+                <div id='notes-names' class="row">
+                    <div class="notes-name col-sm-1">DO</div>
+                    <div class="notes-name col-sm-1">RE</div>
+                    <div class="notes-name col-sm-1">MI</div>
+                    <div class="notes-name col-sm-1">FA</div>
+                    <div class="notes-name col-sm-1">SOL</div>
+                    <div class="notes-name  col-sm-1">LA</div>
+                    <div class="notes-name col-sm-1">SI</div>
+                    <div class="notes-name col-sm-1">DO</div>
+                </div>
 
             </div>
-
-            <!-- section for functions -->
-
-            <div id="functions" class="d-flex bd-highlight">
-                <button id='record' class="functions-btn">record</button>
-                <input type="text" name="text" id="sample">
-                <button class="functions-btn" id='save'>save</button>
-                <button class="functions-btn">play</button>
-                <p id='log'></p>
-
-            </div>
-
         </div>
 
 

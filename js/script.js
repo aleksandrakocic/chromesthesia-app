@@ -3,9 +3,9 @@ const synth = new Tone.Synth();
 synth.oscillator.type = "sine";
 synth.toDestination();
 var synthesizer = document.getElementById("synthesizer");
-// var key = document.getElementsByClassName("key");
 
 
+// var for the colors trigger
 var red = document.getElementById("red");
 var orange = document.getElementById('orange');
 var yellow = document.getElementById('yellow');
@@ -13,8 +13,9 @@ var green = document.getElementById('green');
 var cyan = document.getElementById('cyan');
 var blue = document.getElementById('blue');
 var violet = document.getElementById('violet');
+var redDark = document.getElementById('red-dark');
 
-
+//section fot the keydown events
 document.addEventListener("keydown", (e) => {
 
     var key = e.key;
@@ -84,13 +85,14 @@ document.addEventListener("keydown", (e) => {
         case "l":
             document.querySelectorAll('.key')[7].classList.add("pressed");
             synth.triggerAttack("C5", "16n");
+            redDark.classList.add('dark-red-visible');
             break;
     }
 })
 
 
 
-
+//section fot the keyup events
 document.addEventListener("keyup", e => {
     switch (e.key) {
         case "a":
@@ -127,5 +129,13 @@ document.addEventListener("keyup", e => {
             document.querySelectorAll('.key')[6].classList.remove("pressed");
             synth.triggerRelease();
             violet.classList.remove("violet-visible");
+
+        case "l":
+            document.querySelectorAll('.key')[7].classList.remove("pressed");
+            synth.triggerRelease();
+            redDark.classList.remove("dark-red-visible");
+
+
+
     }
 });

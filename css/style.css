@@ -1,12 +1,14 @@
             body {
                 width: auto;
                 height: auto;
-                padding-left: 8%;
+                padding-top: 20px;
                 background-color: black;
+                font-family: 'Montserrat', sans-serif;
             }
             
             #content {
                 height: 100%;
+                margin-left: 6%;
             }
             /*INFORMATIONS SECTION*/
             
@@ -14,15 +16,12 @@
                 margin-bottom: 10px;
                 color: white;
                 text-align: center;
-                font-family: 'Merriweather', serif;
+                font-size: 25px;
+                letter-spacing: 10px;
             }
-            /* #instructions {
-                text-align: center;
-                font-size: 20px;
-            } */
             
             #piano-content {
-                margin-left: 200px;
+                margin-left: 250px;
             }
             /* COLORS ANIMATION SECTION */
             
@@ -32,12 +31,26 @@
                 margin-bottom: 10px;
             }
             
+            #duration-section {
+                margin-left: 100px;
+            }
+            
             #duration {
                 height: 240px;
                 width: 10px;
-                margin-left: 150px;
-                margin-bottom: -20px;
+                margin-left: 100px;
                 position: absolute;
+                border-left: 1px solid gray;
+            }
+            
+            #duration-label {
+                -ms-transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+                color: gray;
+                width: 100px;
+                height: 100px;
+                margin-top: 50px;
             }
             
             .duration-info {
@@ -50,7 +63,6 @@
                 width: 100px;
                 transform-origin: bottom;
                 transform: scaleY(0);
-                /* border: 1px solid white; */
                 border-radius: 5px;
             }
             
@@ -67,7 +79,7 @@
                 height: 240px;
                 transition: 1.5s ease;
                 background: rgb(255, 255, 255);
-                background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(204, 0, 0) 100%);
+                background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(153, 0, 0) 100%);
             }
             
             .orange-visible {
@@ -121,8 +133,9 @@
             
             #synthesizer {
                 width: 802px;
-                /* border-top: 1px solid lightgray; */
                 border-radius: 5px;
+                height: 300px;
+                margin-left: 3px;
             }
             
             .key {
@@ -133,7 +146,7 @@
                 border-radius: 0 0 5px 5px;
                 background: white;
                 text-align: center;
-                box-shadow: 0 8px 15px -6px white;
+                box-shadow: 0 12px 25px -6px white;
             }
             
             .shadow-inset-center {
@@ -172,10 +185,11 @@
                 margin-left: -30px;
                 margin-right: -30px;
                 border: 1px solid black;
+                border-top: 1px solid gray;
                 border-radius: 0 0 5px 5px;
                 background: black;
                 color: white;
-                box-shadow: 0 8px 15px -6px black;
+                box-shadow: 0 8px 25px -6px black;
             }
             
             #sample {
@@ -190,17 +204,35 @@
                 box-shadow: inset 0 0 10px #000000;
             }
             
+            #notes-section {
+                margin-left: 20px;
+            }
+            
             #notes-names {
                 width: 800px;
                 margin-top: 20px;
+                font-size: 20px;
             }
             
             .notes-name {
                 text-align: center;
                 width: 100px;
                 color: white;
+                border-bottom: 1px solid gray;
+            }
+            
+            #notes-info {
+                width: 802px;
+                text-align: center;
+                color: gray;
             }
             /*SWITCH BUTTON SECTION*/
+            
+            #switch-section {
+                margin-left: 5%;
+                color: gray;
+                width: 200px;
+            }
             
             .switch {
                 position: relative;
@@ -225,6 +257,7 @@
                 background-color: #ccc;
                 -webkit-transition: .4s;
                 transition: .4s;
+                border-radius: 34px;
             }
             
             .slider:before {
@@ -237,27 +270,19 @@
                 background-color: white;
                 -webkit-transition: .4s;
                 transition: .4s;
+                border-radius: 50%;
             }
             
             input:checked+.slider {
-                background-color: #91ffbb;
+                background-color: #78ffc9;
             }
             
             input:focus+.slider {
-                box-shadow: 0 0 1px #91ffbb;
+                box-shadow: 0 0 1px #78ffc9;
             }
             
             input:checked+.slider:before {
                 -webkit-transform: translateX(26px);
                 -ms-transform: translateX(26px);
                 transform: translateX(26px);
-            }
-            /* Rounded sliders */
-            
-            .slider.round {
-                border-radius: 34px;
-            }
-            
-            .slider.round:before {
-                border-radius: 50%;
             }

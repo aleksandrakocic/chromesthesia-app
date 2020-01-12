@@ -13,8 +13,8 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
-    <!-- fonts links-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <!-- font links-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
     <!-- link to css file-->
     <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -28,28 +28,31 @@
     <div id='content'>
         <div class="d-flex justify-content-center">
 
-            <h1 id='heading'> Chromesthesia application</h1>
-            <!-- <h2 id='instructions'> Svako slovo odgovara jednoj noti. Pri sviranju pocinje animacija boja. </h2> -->
-
-            <!-- switch colors on/off -->
-            <div>
+            <h1 id='heading'> CHROMESTHESIA APPLICATION</h1>
+            <div id='switch-section' class='row'>
+                <p> ON/OFF COLORS ANIMATION</p>
                 <label class="switch">
-                                <input type="checkbox" checked>
-                                <span class="slider round"></span>
-                            </label>
+                <input type="checkbox" checked>
+                 <span class="slider"></span>
+            </label>
             </div>
-
-
-
 
             <!-- note duration -->
+            <div id='duration-section'>
+                <div class="col-xs-12 col-md-8" id='duration-label'>
+                    <p>DURATION</p>
+                </div>
 
-            <div id='duration' class="col-sm-1 d-flex flex-column bd-highlight mb-4">
-                <p class='p-2 bd-highlight duration-info'>4/4</p>
-                <p class='duration-info  p-2 bd-highlight'>3/4</p>
-                <p class='duration-info p-2 bd-highlight'>2/4</p>
-                <p class='duration-info p-2 bd-highlight'>1/4</p>
+
+                <div id='duration' class="col-xs-12 col-md-8">
+
+                    <p class='p-2 bd-highlight duration-info'>4/4</p>
+                    <p class='duration-info  p-2 bd-highlight'>3/4</p>
+                    <p class='duration-info p-2 bd-highlight'>2/4</p>
+                    <p class='duration-info p-2 bd-highlight'>1/4</p>
+                </div>
             </div>
+
 
 
 
@@ -57,7 +60,7 @@
             <div id='piano-content'>
                 <!-- section for colors animation -->
 
-                <div class=" row" id="colors">
+                <div id="colors">
 
                     <div id='red' class="col-sm-1 color-hidden"></div>
                     <div id='orange' class="col-sm-1 color-hidden"></div>
@@ -68,10 +71,15 @@
                     <div id='violet' class="col-sm-1 color-hidden"></div>
                     <div id='red-dark' class="col-sm-1 color-hidden"></div>
                 </div>
+                <div>
+                </div>
+
+
+
 
 
                 <!-- section - synthesizer -->
-                <div class="row " id="synthesizer">
+                <div class="row" id="synthesizer">
 
                     <div data-note="C4" class="key col-sm-1">A</div>
                     <div data-note="C#4" class="black-key col-sm-1">W</div>
@@ -90,19 +98,24 @@
 
                 </div>
 
+                <div id='notes-section'>
+                    <!-- section for functions -->
+                    <div id='notes-names' class="row">
+                        <div class="notes-name col-sm-1">C</div>
+                        <div class="notes-name col-sm-1">D</div>
+                        <div class="notes-name col-sm-1">E</div>
+                        <div class="notes-name col-sm-1">F</div>
+                        <div class="notes-name col-sm-1">G</div>
+                        <div class="notes-name  col-sm-1">A</div>
+                        <div class="notes-name col-sm-1">B</div>
+                        <div class="notes-name col-sm-1">C</div>
+                    </div>
 
-                <!-- section for functions -->
-                <div id='notes-names' class="row">
-                    <div class="notes-name col-sm-1">DO</div>
-                    <div class="notes-name col-sm-1">RE</div>
-                    <div class="notes-name col-sm-1">MI</div>
-                    <div class="notes-name col-sm-1">FA</div>
-                    <div class="notes-name col-sm-1">SOL</div>
-                    <div class="notes-name  col-sm-1">LA</div>
-                    <div class="notes-name col-sm-1">SI</div>
-                    <div class="notes-name col-sm-1">DO</div>
+                    <div id='notes-info'>
+                        <p>NOTES INFO</p>
+                    </div>
+
                 </div>
-
             </div>
         </div>
 

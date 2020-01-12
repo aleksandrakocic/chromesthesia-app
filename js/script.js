@@ -143,21 +143,17 @@ document.addEventListener("keyup", e => {
 });
 
 
-
+// turn on/off colors animation section
 document.addEventListener('DOMContentLoaded', function() {
     var checkbox = document.querySelector('input[type="checkbox"]');
 
     checkbox.addEventListener('change', function() {
         if (checkbox.checked) {
-            // do this
             document.getElementById("colors").style.visibility = "visible";
-            document.getElementById('duration').style.visibility = "visible";
-            console.log('Checked');
+            document.getElementById('duration-section').style.visibility = "visible";
         } else {
-            // do that
             document.getElementById("colors").style.visibility = "hidden";
-            document.getElementById('duration').style.visibility = "hidden";
-            console.log('Not checked');
+            document.getElementById('duration-section').style.visibility = "hidden";
         }
     });
 });

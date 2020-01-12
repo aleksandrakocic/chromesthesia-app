@@ -27,18 +27,28 @@
             <h1 id='heading'> Chromesthesia application</h1>
             <h2 id='instructions'> Svako slovo odgovara jednoj noti. Pri sviranju pocinje animacija boja. </h2>
 
+            <!-- note duration -->
 
-            <!-- section for colors animation -->
-            <div id='scale' class="col-sm-1 d-flex flex-column bd-highlight mb-4">
-                <p class='p-2 bd-highlight scale-info'>4/4</p>
-                <p class='scale-info  p-2 bd-highlight scale-info'>3/4</p>
-                <p class='scale-info p-2 bd-highlight scale-info'>2/4</p>
-                <p class='scale-info p-2 bd-highlight scale-info '>1/4</p>
+            <div id='duration' class="col-sm-1 d-flex flex-column bd-highlight mb-4">
+                <p class='p-2 bd-highlight duration-info'>4/4</p>
+                <p class='duration-info  p-2 bd-highlight'>3/4</p>
+                <p class='duration-info p-2 bd-highlight'>2/4</p>
+                <p class='duration-info p-2 bd-highlight'>1/4</p>
             </div>
 
-            <div id='piano-content'>
 
-                <!--colors section-->
+            <!-- switch colors on/off -->
+            <div>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+
+            <div id='piano-content'>
+                <!-- section for colors animation -->
+
                 <div class=" row" id="colors">
 
                     <div id='red' class="col-sm-1 color-hidden"></div>
@@ -49,7 +59,6 @@
                     <div id='blue' class="col-sm-1 color-hidden"></div>
                     <div id='violet' class="col-sm-1 color-hidden"></div>
                     <div id='red-dark' class="col-sm-1 color-hidden"></div>
-
                 </div>
 
 

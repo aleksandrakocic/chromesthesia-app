@@ -15,7 +15,9 @@ var blue = document.getElementById('blue');
 var violet = document.getElementById('violet');
 var redDark = document.getElementById('red-dark');
 
+
 //section fot the keydown events
+
 document.addEventListener("keydown", (e) => {
 
     var key = e.key;
@@ -88,7 +90,7 @@ document.addEventListener("keydown", (e) => {
             redDark.classList.add('dark-red-visible');
             break;
     }
-})
+});
 
 
 
@@ -138,4 +140,24 @@ document.addEventListener("keyup", e => {
 
 
     }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var checkbox = document.querySelector('input[type="checkbox"]');
+
+    checkbox.addEventListener('change', function() {
+        if (checkbox.checked) {
+            // do this
+            document.getElementById("colors").style.visibility = "visible";
+            document.getElementById('duration').style.visibility = "visible";
+            console.log('Checked');
+        } else {
+            // do that
+            document.getElementById("colors").style.visibility = "hidden";
+            document.getElementById('duration').style.visibility = "hidden";
+            console.log('Not checked');
+        }
+    });
 });

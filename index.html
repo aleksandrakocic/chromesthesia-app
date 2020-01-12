@@ -12,6 +12,10 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- fonts links-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+
     <!-- link to css file-->
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
@@ -25,7 +29,18 @@
         <div class="d-flex justify-content-center">
 
             <h1 id='heading'> Chromesthesia application</h1>
-            <h2 id='instructions'> Svako slovo odgovara jednoj noti. Pri sviranju pocinje animacija boja. </h2>
+            <!-- <h2 id='instructions'> Svako slovo odgovara jednoj noti. Pri sviranju pocinje animacija boja. </h2> -->
+
+            <!-- switch colors on/off -->
+            <div>
+                <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+            </div>
+
+
+
 
             <!-- note duration -->
 
@@ -37,13 +52,6 @@
             </div>
 
 
-            <!-- switch colors on/off -->
-            <div>
-                <label class="switch">
-                    <input type="checkbox" checked>
-                    <span class="slider round"></span>
-                </label>
-            </div>
 
 
             <div id='piano-content'>
